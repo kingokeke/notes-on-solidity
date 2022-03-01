@@ -24,26 +24,26 @@ contract IterableMapping {
 
     // Get number of addresses in mapping
     function getSize() external view returns (uint256 size) {
-        return keys.length;
+        size = keys.length;
     }
 
     // Get balance of the first address added to the mapping
     function getFirstBalance() external view returns (uint256 bal) {
-      return balances[keys[0]];
+      bal = balances[keys[0]];
     }
 
     // Get balance of the last address added to the mapping
     function getLastBalance() external view returns (uint256 bal) {
-      return balances[keys[keys.length - 1]];
+      bal = balances[keys[keys.length - 1]];
     }
 
     // Get address at a particular index
     function getAddressAtIndex(uint256 _index) external view returns (address key) {
-        return keys[_index];
+        key = keys[_index];
     }
 
     // Get balance of an address at a particular index
     function getBalanceAtIndex(uint256 _index) external view returns (uint256 bal) {
-      return balances[keys[_index]];
+      bal = balances[keys[_index]];
     }
 }
